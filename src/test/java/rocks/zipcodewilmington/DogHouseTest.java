@@ -17,6 +17,8 @@ public class DogHouseTest {
     String givenName;
     Date givenBirthDate;
     Integer givenId;
+
+
     // TODO - Create tests for `void add(Dog dog)`
     // TODO - Create tests for `void remove(Integer id)`
     // TODO - Create tests for `void remove(Dog dog)`
@@ -25,6 +27,7 @@ public class DogHouseTest {
 
     @Test
     public void testGetNumberOfDogs() {
+
         // Given (some
         String name = "Milo";
         Date birthDate = new Date();
@@ -56,11 +59,15 @@ public class DogHouseTest {
     }
 
 
+
     @Test
     public void testGetNumOfDogs(){
         Dog dog = new Dog(givenName,givenBirthDate,givenId);
         Integer numOfDogs = 0;
         Assert.assertEquals(numOfDogs,DogHouse.getNumberOfDogs());
+
+
     }
+
 
 }

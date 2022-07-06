@@ -22,10 +22,16 @@ public class CatHouseTest {
 
 @Test
     public void testAddCat(){
-    Cat cat = new Cat(givenName,givenBirthDate,givenId);
-    CatHouse.add(cat);
-    Integer numOfCats = 1;
-    Assert.assertEquals(numOfCats, CatHouse.getNumberOfCats());
+    String givenName = "Ted";
+    Date givenBirthDate = new Date(1993,07,22);
+    Integer givenID = 1;
+    Cat Ted = new Cat(givenName,givenBirthDate,givenId);
+    CatHouse.add(Ted);
+    int numOfCats = 1;
+    int actualNumOfCat = CatHouse.getNumberOfCats();
+    Assert.assertEquals(numOfCats, actualNumOfCat);
+
+    CatHouse.clear();
 }
 
 @Test
@@ -42,4 +48,6 @@ public class CatHouseTest {
     Integer numOfCats = 0;
     Assert.assertEquals(numOfCats, CatHouse.getNumberOfCats());
 }
+
+
 }
